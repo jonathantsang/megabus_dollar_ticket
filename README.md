@@ -9,6 +9,7 @@ To find $1 MegaBus tickets
 6. on the megabus result page, click on any date to make a new request
 7. under the developer window, find something like this:
 https://ca.megabus.com/journey-planner/api/journeys?originId=145&destinationId=427&departureDate=2018-01-08&totalPassengers=1&concessionCount=0&nusCount=0&days=1
+8. Under originId and destinationId you can find your cities and the number Megabus represents them as.
 
 ## TODO
 1. do it for more days than just starting today

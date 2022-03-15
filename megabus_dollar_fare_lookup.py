@@ -9,12 +9,12 @@ import calendar
 # bypass megabus cloudflare protection
 import cloudscraper
 
-TO_WRITE = {}
+TO_WRITE = []
 
-STCATHARINES = 427
-TORONTO      = 145
 AUSTIN = 320
 HOUSTON = 318
+DALLAS = 317
+SAN_ANTONIO = 321
 
 DEBUG = "&totalPassengers=1&concessionCount=0&nusCount=0&otherDisabilityCount=0&wheelchairSeated=0&pcaCount=0&days=1"
 
@@ -61,11 +61,12 @@ def print_cheap_trips(journeys):
         if price < 5:
             deal = "{} {} = ${}  {}".format(date_str, time_str, price, calendar.day_name[week_day])
             print(deal)
-            TO_WRITE[date_str] = deal
+            TO_WRITE.append(deal)
 
 
 def search_ticket(days_from_today, orig, dest):
     today = datetime.date.today()
+    TO_WRITE.sort()
 
     for day in range(days_from_today):
         date = today + datetime.timedelta(day)
@@ -76,8 +77,8 @@ def search_ticket(days_from_today, orig, dest):
 # write to a file for lookup
 def write_file():
     with open("times.txt", 'w') as f:
-        for key, value in TO_WRITE.items():
-            f.write('%s:%s\n' % (key, value))
+        for deal in TO_WRITE:
+            f.write('%s\n' % deal)
 
 print("==== From Austin to HOUSTON: ====")
 search_ticket(days_from_today = 120,

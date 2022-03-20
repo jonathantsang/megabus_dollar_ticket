@@ -12,6 +12,7 @@ import cloudscraper
 TO_WRITE = []
 
 AUSTIN = 320
+# NOTE: Houston has THREE different megabus stops all classified as Houston (but very far apart) so if it is $1, it may be wildly different
 HOUSTON = 318
 DALLAS = 317
 SAN_ANTONIO = 321
@@ -81,6 +82,7 @@ def write_file():
             f.write('%s\n' % deal)
 
 print("==== From Austin to HOUSTON: ====")
+print("NOTE: Houston has THREE different megabus stops all classified as Houston (but very far apart) so if it is $1, it may be wildly different")
 search_ticket(days_from_today = 120,
               orig            = AUSTIN,
               dest            = HOUSTON)

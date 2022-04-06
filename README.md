@@ -13,10 +13,10 @@ https://ca.megabus.com/journey-planner/api/journeys?originId=145&destinationId=4
 
 ## Known cities ids
 
-AUSTIN = 320
-HOUSTON = 318
-DALLAS = 317
-SAN_ANTONIO = 321
+- AUSTIN = 320
+- HOUSTON = 318 (NOTE: Houston has THREE different megabus stops all classified as Houston (but very far apart) so if it is $1, it may be wildly different)
+- DALLAS = 317
+- SAN_ANTONIO = 321
 
 ## TODO
 1. do it for more days than just starting today

@@ -17,6 +17,8 @@ https://ca.megabus.com/journey-planner/api/journeys?originId=145&destinationId=4
 - HOUSTON = 318 (NOTE: Houston has THREE different megabus stops all classified as Houston (but very far apart) so if it is $1, it may be wildly different)
 - DALLAS = 317
 - SAN_ANTONIO = 321
+- NEW_HAVEN = 122
+- NEW_YORK = 123
 
 ## TODO
 1. do it for more days than just starting today
